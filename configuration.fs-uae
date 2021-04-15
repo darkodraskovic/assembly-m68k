@@ -1,0 +1,18 @@
+[fs-uae]
+
+# MEMORY
+amiga_model = A1200/020
+chip_memory = 4096
+fast_memory = 8192
+# slow_memory = 512
+
+# DRIVES
+hard_drive_0 = /home/darko/Programs/Amiga/ClassicWB_68K/System.hdf
+hard_drive_1 = /home/darko/Development/amiga/hd
+kickstart_file = /home/darko/Programs/Amiga/KickstartRoms/Kickstartv3.1rev40.68-1993-A1200.rom
+
+# EMU
+# window_width = 1384
+# window_height = 1080
+texture_filter = nearest
+console_debugger = 1
