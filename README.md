@@ -34,23 +34,30 @@ Install Classic Workbench 68K Versions from http://classicwb.abime.net/classicwe
 
 ### Execute
 
-Once you have the emulator up and running, double click on the Workbench icon on the desktop. Double click the shell icon. You are now in AmigaDOS. 
+Once you have the emulator up and running, double click on the Workbench icon on the desktop. Double click the Shell icon. You are now in AmigaDOS. 
 
 ```
-1.SYS:> cd hd:
-1.hd:> cd asm
-1.hd:asm> cd 00
-1.hd:asm/00> example
+1.SYS:> cd DH1:build
+1.DH1:build> o
 ```
 
-### Debug
+### FS-UAE Debug
 
-*NB: do this before `1.hd:asm/00> example`.* (see above)
+*NB: do this before `1.DH1:build> o` (see above)
 
-Activate FS-UAE console debugger by holding F12 and pressing `d`. You can type `?` <Enter> to list debugger commands. Run `fp "example"` <Enter> to tell the debugger to break execution when process called "example" is being run. Run
+Activate FS-UAE console debugger by holding F12 and pressing `d`. You can type `?` <Enter> to list debugger commands. Run `fp "o"` <Enter> to tell the debugger to break execution when process called "example" is being run. Run
 
 ```
-1.hd:asm/00> example
+1.DH1:build> o
 ```
 
 Once you execute the binary, the breakpoint will trigger and and the control will be returned to debugger. Type `d` <Enter> in the debugger for disassembly. Type `g` <Enter> for "go" so that emulator will kick back alive.
+
+### MonAm Debug
+
+Put `MonAm` directory in `DH1` directory. In Shell, run 
+
+```
+1.SYS:> cd DH1:
+1.DH1:> MonAm/MonAm build/o
+```

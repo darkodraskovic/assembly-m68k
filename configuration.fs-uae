@@ -8,7 +8,7 @@ fast_memory = 8192
 
 # DRIVES
 hard_drive_0 = /home/darko/Programs/Amiga/ClassicWB_68K/System.hdf
-hard_drive_1 = /home/darko/Development/amiga/hd
+hard_drive_1 = /home/darko/Programs/Amiga/DH1
 kickstart_file = /home/darko/Programs/Amiga/KickstartRoms/Kickstartv3.1rev40.68-1993-A1200.rom
 
 # EMU

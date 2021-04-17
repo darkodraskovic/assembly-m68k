@@ -1,8 +1,6 @@
 #!/bin/bash
-cd $1
-if [ -f "o" ]; then
-    rm o
-fi
-vasmm68k_mot -kick1hunks -Fhunkexe -o o -nosym source.asm
+SRC_DIR=$1
+DST_DIR=~/Programs/Amiga/DH1/build
+vasmm68k_mot -kick1hunks -Fhunkexe -o $DST_DIR/o -nosym $SRC_DIR/source.asm
 
 
