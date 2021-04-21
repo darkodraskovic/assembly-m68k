@@ -3,21 +3,22 @@ ADKCONR		EQU		$dff010 ; Audio, Disk, UART Control Read
 INTENAR		EQU		$dff01c ; Interrupt enable bits (read)
 INTREQR		EQU		$dff01e ; Interrupt request bits (read)
 
-DMACON		EQU		$dff096
+DMACON		EQU		$dff096 ; DMA control write
 ADKCON		EQU		$dff09e
 INTENA		EQU		$dff09a
 INTREQ		EQU		$dff09c
 
-BPLCON0         EQU             $dff100
-BPLCON1         EQU             $dff102
-BPL1MOD         EQU             $dff108
-BPL2MOD         EQU             $dff10a
-DIWSTRT         EQU             $dff08e
-DIWSTOP         EQU             $dff090
-DDFSTRT         EQU             $dff092
-DDFSTOP         EQU             $dff094
+BPLCON0         EQU             $dff100 ; Bitplane control register (misc. ctrl bits)
+BPLCON1         EQU             $dff102 ; Bitplane ctrl reg (scroll val PF1, PF2)
+BPL1MOD         EQU             $dff108 ; Bitplane module (odd planes)
+BPL2MOD         EQU             $dff10a ; Bitplane module (even planes)
+DIWSTRT         EQU             $dff08e ; Display window start (UL VH pos)
+DIWSTOP         EQU             $dff090 ; Display window stop (LR VH pos)
+DDFSTRT         EQU             $dff092 ; Display bitplane data fetch start (H pos)
+DDFSTOP         EQU             $dff094 ; Display bitplane data fetch end (H pos)
+
 VPOSR           EQU             $dff004
-COP1LCH         EQU             $dff080
+COP1LCH         EQU             $dff080 ; Copper first loc reg (high 3 bits, high 5 bits of ECS)
 
 CIAAPRA         EQU             $bfe001
 

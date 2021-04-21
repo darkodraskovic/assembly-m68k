@@ -94,4 +94,4 @@ waitras2:
         dc.w $2d07,$fffe
         dc.w $180,CYAN
 
-        ;; dc.w $ffff,$fffe        ; WAIT for pos $fffe (impossible pos)
+        dc.w $ffff,$fffe        ; WAIT for pos $fffe (impossible pos)
