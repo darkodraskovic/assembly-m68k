@@ -7,7 +7,7 @@
         jsr     OpenLib(a6)
         tst.l   d0              ; error by dos.library open?
         beq     end
-        move.l  d0,dosbase      ; d0 (base dos.library ptr) is OpenLib() ret val
+        move.l  d0,dosbase      ; d0 (dos.library base ptr) is OpenLib() ret val
 
 ;;; Get the CLI-Window output handle
         move.l  dosbase,a6
@@ -16,7 +16,7 @@
 
 ;;; Print text
         move.l  clihandle,d1    ; d1 is 1st Write() arg
-        move.l  #text,d2        ; addr of the first letter to d2; d2 is 2nd Write() arg
+        move.l  #text,d2        ; d2 is 2nd Write() arg: addr of the first letter to d2
         move.l  #33,d3          ; text len to d3
         jsr     Write(a6)       ; call Write()
 

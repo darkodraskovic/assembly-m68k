@@ -10,6 +10,8 @@ INTREQ		EQU		$dff09c
 
 BPLCON0         EQU             $dff100 ; Bitplane control register (misc. ctrl bits)
 BPLCON1         EQU             $dff102 ; Bitplane ctrl reg (scroll val PF1, PF2)
+BPLCON2         EQU             $dff104 ; Bitplane ctrl reg (scroll val PF1, PF2)
+BPLCON3         EQU             $dff106 ; Bitplane ctrl reg (scroll val PF1, PF2)
 BPL1MOD         EQU             $dff108 ; Bitplane module (odd planes)
 BPL2MOD         EQU             $dff10a ; Bitplane module (even planes)
 DIWSTRT         EQU             $dff08e ; Display window start (UL VH pos)

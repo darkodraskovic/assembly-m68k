@@ -68,6 +68,7 @@ copper:
         ;; copperlist is executed on VBLANK interrupt
         ;; MOVE takes 8 cycles
         dc.w $1fc,0             ; slow fetch mode, AGA compatibility
+        dc.w $106,$0000         ; 9 = LOCT - palette low nibble colour, AGA compatibility
 
         ;; Enables color burst output signal (set 9th bit of BPLCON0)
         dc.w $100,$0200         ; MOVE $0200 (2nd val) to $dff100 (1st val, i.e. BPLCON0)
