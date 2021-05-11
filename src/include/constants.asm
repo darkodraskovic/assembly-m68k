@@ -5,6 +5,7 @@ SCRBOT          EQU     $12c
 
 BLACK           EQU     $000
 WHITE           EQU     $fff
+GREY            EQU     $888
 RED             EQU     $f00
 GREEN           EQU     $0f0
 BLUE            EQU     $00f

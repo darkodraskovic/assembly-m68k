@@ -20,12 +20,18 @@ DIWSTOP         EQU             $dff090 ; Display window stop (LR VH pos)
 DDFSTRT         EQU             $dff092 ; Display bitplane data fetch start (H pos)
 DDFSTOP         EQU             $dff094 ; Display bitplane data fetch end (H pos)
 
-VPOSR           EQU             $dff004
-COP1LCH         EQU             $dff080 ; Copper first loc reg (high 3 bits, high 5 bits of ECS)
+BPL1PTH         EQU             $dff0e0 ; Bitplane pointer 1 (high 5 bits was 3 bits)
+BPL2PTL         EQU             $dff0e2 ; Bitplane pointer 1 (low 15 bits)
 
+VPOSR           EQU             $dff004
+VHPOSR          EQU             $dff006 ; Read vert and horiz position of beam
+COP1LCH         EQU             $dff080 ; Coprocessor 1st location (high 5 bits)
+COP1LCL         EQU             $dff082
+COP2LCH         EQU             $dff084
+COP2LCL         EQU             $dff086
+        
 CIAAPRA         EQU             $bfe001
 
-VHPOSR          EQU             $dff006             ; Read vert and horiz position of beam
 COLOR00         EQU             $dff180             ; Color table 0
 COLOR01         EQU             $dff182             ; Color table 1
 
