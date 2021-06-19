@@ -1,5 +1,6 @@
-        include "../include/registers.asm"
-        include "../include/constants.asm"
+        incdir  "../include"    
+        include "registers.asm"
+        include "constants.asm"
         
 init:
         move.w  #$4000,INTENA           ; lock interrupts
@@ -77,7 +78,7 @@ copperl:
         dc.w    $10a,$0000      ; BPL2MOD
         dc.w    $100,$1200      ; BPLCON0 1 bit planes use, 2 color burst output signal
 pl1:    dc.w    $0e0,$0005      ; BPL1PTH
-        dc.w    $0e2,$0000      ; BPL2PTL
+        dc.w    $0e2,$0000      ; BPL1PTL
 
         dc.w    $0180,$0000
         

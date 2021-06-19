@@ -1,4 +1,5 @@
-        include "../include/libs.asm"
+        incdir  "../include"    
+        include "libs.asm"
 
 ;;; Open library
         move.l  ExecBase,a6
@@ -17,10 +18,10 @@
 ;;; Print text
         move.l  clihandle,d1    ; d1 is 1st Write() arg
         move.l  #text,d2        ; d2 is 2nd Write() arg: addr of the first letter to d2
-        move.l  #33,d3          ; text len to d3
-        jsr     Write(a6)       ; call Write()
+        move.l  #39,d3          ; text len to d3
+        jsr     Write(a6)       ; call Write() ; a6 holds dosbase
 
-;;;
+;;; Close dos.library
         move.l  dosbase,a1      ; a1 (base ptr to dos.library) is 1st CloseLib() arg
         move.l  ExecBase,a6
         jsr     CloseLib(a6)
@@ -29,9 +30,13 @@ end:
         rts                     ; back to CLI
         
 ;;; Names
-dosname:        dc.b    "dos.library",0
+dosname:
+        dc.b    "dos.library",0
         even
-dosbase:        ds.l    1
-clihandle:      ds.l    1
-text:           dc.b    "This text is printed in the CLI window",10
+dosbase:
+        ds.l    1
+clihandle:
+        ds.l    1
+text:
+        dc.b    "This text is printed in the CLI window",10 ; 10 is newline
         even

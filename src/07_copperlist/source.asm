@@ -1,4 +1,7 @@
-        include "../include/constants.asm"
+        incdir "../include"
+        include "libs.asm"
+        include "registers.asm"
+        include "constants.asm"
 
 OFFSET         EQU              48
 

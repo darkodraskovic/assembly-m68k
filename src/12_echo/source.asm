@@ -1,12 +1,13 @@
-        include "../include/libs.asm"
+        incdir "../include"    
+        include "libs.asm"
 
-        movem.l a0/d0,-(sp)     ; save command line
+        movem.l a0/d0,-(sp)     ; save command line registers
 
         move.l  ExecBase,a6
         lea     dosname,a1
         clr.l   d0
         jsr     OpenLib(a6)     ; open DosLib
-        move.l  d0,a6
+        move.l  d0,a6           ; d0 (dos.library base ptr) is OpenLib() ret val
 
         jsr     Output(a6)      ; Output handle to d0
         move.l  d0,outhandle
@@ -17,7 +18,7 @@
         move.l  d0,d3          ; command line text len to d3
         jsr     Write(a6)
 
-        move.l  a6,a1
+        move.l  a6,a1           ; a6 stores dos.library base ptr; a1 is CloseLib arg
         move.l  ExecBase,a6
         jsr     CloseLib(a6)    ; close DosLib
 

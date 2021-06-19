@@ -1,4 +1,5 @@
-        include "../include/libs.asm"
+        incdir  "../include"    
+        include "libs.asm"
 
 ;;; DOS-Lib open
         move.l  ExecBase,a6
@@ -40,7 +41,7 @@
         move.l  d4,d3           ; Read() puts # read chars to d4
         jsr     Write(a6)
         
-;;; Close library
+;;; Close dos.library
         move.l  dosbase,a1
         move.l  ExecBase,a6
         jsr     CloseLib(a6)
