@@ -2,4 +2,7 @@
 **/00_playground_*
 Disk.info
 **/*.s.s
+**/*.asm.s
 **/tmp.fs-uae
+**/configuration.backup
+**/configuration.cache

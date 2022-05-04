@@ -1,2 +1,10 @@
-hard_drive_0 = /home/darko/Radovi/Amiga/WB/ClassicWB_68K_deb/System.hdf
+hard_drive_0 = /home/darko/Programs/Amiga/WB/ClassicWB_68K_deb/System.hdf
 
+window_width = 1280
+window_height = 960
+
+fullscreen = 1
+fullscreen_mode = fullscreen
+
+keep_aspect = 1
+texture_filter = nearest

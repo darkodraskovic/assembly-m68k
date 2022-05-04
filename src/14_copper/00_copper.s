@@ -82,7 +82,7 @@ pl2:    DC.W    BPL2PTH,$0002   ;Move $0002 into register $0E4 (BPL2PTH)
 ;
 ;  Change color registers mid-display
 ;
-        DC.W    COLOR00,$0FF0  ;Move black into register $0180 (COLOR00)
+        DC.W    COLOR00,$00FF  ;Move black into register $0180 (COLOR00)
         DC.W    COLOR01,$0FF0  ;Move yellow into register $0182 (COLOR01)
         DC.W    COLOR02,$00FF  ;Move cyan into register $0184 (COLOR02)
         DC.W    COLOR03,$0F0F  ;Move magenta into register $0186 (COLOR03)
