@@ -59,7 +59,7 @@ if [ $? -gt 0 ]; then
 fi
 
 # replace ../include with assembly-m68k:src/include so AsmPro can understand include path
-sed "s/..\/include/assembly-m68k:src\/include\//g" ${SRC_PATH} > ${SRC_PATH}.s
+sed "s/..\/include/\/include\//g" ${SRC_PATH} > ${SRC_PATH}.s
 
 cd "${UAE_CONFIGS}"
 

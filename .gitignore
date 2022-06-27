@@ -6,3 +6,7 @@ Disk.info
 **/tmp.fs-uae
 **/configuration.backup
 **/configuration.cache
+*.uaem
+*.BACKUP
+src/_UAEFSDB.___
+

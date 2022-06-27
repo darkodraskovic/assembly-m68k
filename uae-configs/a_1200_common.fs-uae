@@ -7,7 +7,7 @@ amiga_model = A1200/020
 cpu = 68020
 jit_compiler = 1
 
-kickstart_file = /home/darko/Programs/Amiga/Roms/Kickstartv3.1rev40.68-1993-A1200.rom
+kickstart_file = /home/darko/Radovi/RPi/games/amiga/kickstarts/Kickstart v3.1 rev 40.68 (1993)(Commodore)(A1200).rom
 
 chip_memory = 8192
 zorro_iii_memory = 262144
@@ -16,5 +16,8 @@ floppy_drive_volume = 0
 
 joystick_port_1_mode = nothing
 
-hard_drive_1 = /home/darko/Programs/Amiga/Utils
-hard_drive_2 = /home/darko/Development/assembly-m68k
+hard_drive_1 = /home/darko/Radovi/RPi/games/amiga/hds/Utils
+hard_drive_2 = /home/darko/Development/assembly-m68k/src
+
+keyboard_key_lalt = action_key_alt_left
+keyboard_key_ralt = action_key_amiga_right
