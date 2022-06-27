@@ -18,7 +18,7 @@ DEBUG=false
 NOSYM="-nosym"
 
 # Get the options
-while getopts "s:dkw" option; do
+while getopts "s:d" option; do
     case $option in
         s)
             SRC_PATH=$OPTARG
